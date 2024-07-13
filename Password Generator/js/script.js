@@ -1,22 +1,33 @@
 
 const getRandomCharacters = () => {
-const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+'
+const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+'.split('')
 const randomCharacter = Math.floor(Math.random() * characters.length);
-return characters.charAt(randomCharacter);
+return characters[randomCharacter];
 }
 
-
+const simbolos = ['!','@','#','$','%','^','&','*','(',')','-','_','=','+']
+console.log(simbolos[3]);
 
 const generatePassword = (length) => {
     let result = '';
-    for (let i = 0; i < length; i++) {
+    const arr = [["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'],[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],['!','@','#','$','%','^','&','*','(',')','-','_','=','+']]
+        for (let i = 0; i < arr.length; i++) {
+            console.log(arr[i].length);
+            const charactersLength = arr[i].length;
+            const randomNumber = Math.floor(Math.random() * charactersLength);
+            result += arr[i][randomNumber]
+        }
+        
+        console.log(result)
+    
+    for (let i = 4; i < length; i++) {
         result += getRandomCharacters();
     }
     return result;
 }
 
 
-console.log(generatePassword(12,50));
+/*console.log(generatePassword(12,50));*/
 
 
 const generatePasswordBtn = document.getElementById('generator');
@@ -24,8 +35,8 @@ const generatePasswordBtn = document.getElementById('generator');
 generatePasswordBtn.addEventListener('click', () => {
     const lengthInput = document.getElementById('number').value;
     const length = parseInt(lengthInput);
-    if (isNaN(length) || length < 12 || length > 50) {
-        return;
+    if (length < 12 || length > 50) {
+        return
     }
      const password = generatePassword(length);
      document.getElementById('passwordDisplay').innerHTML = `<p class="password-text">Contraseña Generada: </p> 
