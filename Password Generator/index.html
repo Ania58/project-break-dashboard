@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Genera una contraseña segura</title>
+</head>
+<body style="background-image: url('/assets/mountain-area.jpg');">
+    <main class="main">
+        <div class="texto" id="texto">
+            <h2>Crea tu contraseña segura
+                <img src="/assets/padlock black hole.png" alt="padlock" />
+            </h2>
+        </div>
+        <div class="password-generator" id="password-generator">
+            <div class="inputbox" id="inputbox">
+                <p>Numero de caracteres de la Contraseña</p>
+                <div class="buttons">
+                    <input type="number" min="12" max="50" id="number" value="12"/>
+                    <button id="generator">Generar Contraseña</button>
+                    <div id="passwordDisplay"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+</body> 
+</body>
+</html>
