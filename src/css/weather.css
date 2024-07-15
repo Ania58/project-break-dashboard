@@ -46,28 +46,114 @@ table {
 /* My code */
 body {
     text-align: center;
+    background-image: url('../assets/stars.jpg');
+    font-family: 'Poppins', sans-serif;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
 }
 
+.main {
+    display: flex;
+    justify-content: center; 
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
 .container {
+    height: 300px;
+    width: 350px;
     text-align: center; 
     display: flex; 
-    flex-direction: column ; 
+    flex-direction: column; 
     justify-content: center; 
-    align-items: center
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    color: #f4f4f4;
+    border-radius: 15px;
+    background-color: #33333393;
+}
+.city, .country {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.weather p{
+    color: #ffe5c1;
+}
+
+.temp-and-cond-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+
+.picture {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    gap: 10px;
+}
+
+.picture > div img {
+    filter: invert(1);
+    width: 30px;
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.temperature img {
+    filter: invert(1);
+    width: 30px;
+}
+
+.weather-conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.weather-conditions p {
+    color: #b0b0b0;
 }
 
 .forecastContainer {
     display: flex;
-    justify-content: center;
     align-items: center; 
     gap: 10px; 
     width: 300px; 
     height: 200px; 
     margin-top: 25px; 
-    overflow-x: scroll
+    overflow-x: scroll;
 }
 
 .image {
+    width: 40px;
+    height: 40px;
+}
+
+.image-weather {
     width: 100%;
     height: 100%;
+}
+
+.degrees p {
+    color: #ffe5c1;
 }
