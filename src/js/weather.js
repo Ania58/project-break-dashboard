@@ -43,7 +43,7 @@ const showWeather = (weatherFeatures) => {
                 </div>
             </div>
             <div class="weather-conditions"> 
-                <p>Precitation: <span class="precipitation">${precipitation}%</span> </p>
+                <p>Precipitation: <span class="precipitation">${precipitation}%</span> </p>
                 <p>Humidity: <span class="humidity">${humidity}%</span></p>
                 <p>Wind: <span class="wind">${wind} Km/h</span></p>
             </div>
