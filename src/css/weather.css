@@ -78,9 +78,11 @@ body {
     border-radius: 15px;
     background-color: #33333393;
 }
-.city, .country {
+
+.place {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .weather p{
@@ -95,7 +97,7 @@ body {
     flex-wrap: nowrap;
     gap: 20px;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 0;
 }
 
@@ -108,14 +110,16 @@ body {
     gap: 10px;
 }
 
-.picture > div img {
-    filter: invert(1);
-    width: 30px;
-}
 
 .picture img {
     width: 100%;
     height: 100%;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .temperature img {
@@ -145,8 +149,8 @@ body {
 }
 
 .image {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .image-weather {

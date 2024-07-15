@@ -53,13 +53,14 @@ const showWeather = (weatherFeatures) => {
     mainContainer.insertAdjacentHTML('afterbegin',container)
     
     forecast.forEach(fore => {
+        const time = fore.time.split(' ')[1];
         
         elements += `
             
             <div>
-                <div class="foreHour">${fore.time}</div>
+                <div class="foreHour">${time}</div>
                 <div class="image">
-                <img  class="image-weather" src="${fore.condition.icon}" alt="${city}-forecast"> 
+                    <img  class="image-weather" src="${fore.condition.icon}" alt="${city}-forecast"> 
                 </div>
                 <div class="degrees"><p>${fore.temp_c}°C</p></div>
             </div> 
