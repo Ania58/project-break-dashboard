@@ -1,0 +1,168 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* My code */
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url('../assets/nasa-space.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+}
+
+.input-and-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 95px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    height: 700px;
+}
+
+.title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.title img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; 
+    padding: 0;
+    max-width: 400px;
+    color: #f4f4f4;
+    border-radius: 15px;
+    line-height: 16px;
+}
+
+input[type="text"], input[type="number"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0371d8;
+    border: none;
+    color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.links-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: 20px;
+    overflow: scroll;
+}
+
+
+.links-container li {
+    background-color: #33333393;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+
+.links-container li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}   
+
+.links-container button {
+    position: absolute;
+    top: -18px;
+    right: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 10px;
+    background-color: #33333393;
+}
