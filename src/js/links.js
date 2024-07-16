@@ -30,14 +30,17 @@ addLinkBtn.addEventListener('click', () => {
         deleteButton.textContent = 'X';
         listItem.appendChild(deleteButton);
 
+
+        deleteButton.addEventListener('click', () => {
+        listItem.remove()
+        });
+        
     } else {
         alert ('Please write a name and an URL');
     }
 });
 
-/*deleteButton.addEventListener('click', () => {
-    
-})*/
+
 
 
 
