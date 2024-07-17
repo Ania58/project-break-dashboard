@@ -3,14 +3,10 @@ const urlAddressInput = document.getElementById('url-path');
 const addLinkBtn = document.getElementById('add-link');
 const linksContainer = document.getElementById('links-container');
 
-const inputAdded = [
-    {
-        name:'',
-        url: ''
-    }
-];
 
-addLinkBtn.addEventListener('click', () => {
+
+
+/*addLinkBtn.addEventListener('click', () => {
     const linkName = linkNameInput.value;
     const urlAddress = urlAddressInput.value;
     if (linkName && urlAddress) {
@@ -25,6 +21,7 @@ addLinkBtn.addEventListener('click', () => {
 
         linkNameInput.value = '';
         urlAddressInput.value = '';
+        
 
         const deleteButton = document.createElement('button');
         deleteButton.textContent = 'X';
@@ -34,12 +31,92 @@ addLinkBtn.addEventListener('click', () => {
         deleteButton.addEventListener('click', () => {
         listItem.remove()
         });
-        
+
+        const inputAdded = [
+            {
+                name: linkName,
+                url: urlAddress
+            }
+        ];
+
+        localStorage.setItem('links',JSON.stringify(inputAdded));
+
+        const displayUserPage = () => {
+            const storedLinksData = localStorage.getItem('links')
+
+            if (storedLinksData) {
+            const linksData = JSON.parse(storedLinksData) || [];
+            linkNameInput.textContent = storedLinksData[0];
+            
+            } else {
+            console.log('User links not found in local storage')
+            }
+        }
+
+        displayUserPage();
+
     } else {
-        alert ('Please write a name and an URL');
+        console.log('Please write a name and an URL');
+    }
+       
+});*/
+
+const addLinkToDOM = (linkName, urlAddress) => {
+    const newLink = document.createElement('a');
+    newLink.href = urlAddress;
+    newLink.target = '_blank';
+    newLink.textContent = linkName;
+
+    const listItem = document.createElement('li');
+    listItem.appendChild(newLink);
+    linksContainer.appendChild(listItem);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'X';
+    listItem.appendChild(deleteButton);
+
+    deleteButton.addEventListener('click', () => {
+        listItem.remove();
+        // Update localStorage after removal
+        let updatedLinks = JSON.parse(localStorage.getItem('links')) || [];
+        updatedLinks = updatedLinks.filter(link => link.url !== url);
+        localStorage.setItem('links', JSON.stringify(updatedLinks));
+    });
+};
+
+// Function to load and display links from localStorage
+const displayUserPage = () => {
+    const storedLinksData = localStorage.getItem('links');
+    if (storedLinksData) {
+        const linksData = JSON.parse(storedLinksData) || [];
+        linksData.forEach(link => {
+            addLinkToDOM(link.name, link.url);
+        });
+    } else {
+        console.log('User links not found in local storage');
+    }
+};
+
+window.addEventListener('load', displayUserPage);
+
+addLinkBtn.addEventListener('click', () => {
+    const linkName = linkNameInput.value;
+    const urlAddress = urlAddressInput.value;
+    if (linkName && urlAddress) {
+        addLinkToDOM(linkName, urlAddress);
+
+        // Retrieve, update, and save to localStorage
+        let existingLinks = JSON.parse(localStorage.getItem('links')) || [];
+        existingLinks.push({ name: linkName, url: urlAddress });
+        localStorage.setItem('links', JSON.stringify(existingLinks));
+
+        // Clear inputs after updating localStorage
+        linkNameInput.value = '';
+        urlAddressInput.value = '';
+    } else {
+        console.log('Please write a name and an URL');
     }
 });
-
 
 
 
