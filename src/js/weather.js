@@ -96,8 +96,8 @@ const pics3 = [
         const pic3 = document.querySelector('body'); 
   
         function showImage() { 
-            const a3 = Math.floor(Math.random() * pics3.length); 
-            const img3 = pics3[a3]; 
+            const randomPic3 = Math.floor(Math.random() * pics3.length); 
+            const img3 = pics3[randomPic3]; 
             document.body.style.backgroundImage = `url(${img3})`; 
         } 
   

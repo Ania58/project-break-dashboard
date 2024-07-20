@@ -127,7 +127,7 @@ h2 {
     line-height: 16px;
 }
 
-input[type="text"], input[type="number"] { /*probably I copied from password css, remove type number*/
+input[type="text"]{ 
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -141,9 +141,7 @@ button {
     border: none;
     color: #f4f4f4;
     padding: 10px;
-    border-radius: 5px;
-}
-button {   /*check why I have button twice*/
+    border-radius: 5px;  
     margin-top: 10px;
     cursor: pointer;
 }

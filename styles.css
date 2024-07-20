@@ -193,7 +193,7 @@ h2 {
     line-height: 16px;
 }
 
-input[type="text"], input[type="number"] { /*probably I copied from password css, remove type number*/
+input[type="text"] { 
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -208,8 +208,6 @@ button {
     color: #f4f4f4;
     padding: 10px;
     border-radius: 5px;
-}
-button {   /*check why I have button twice*/
     margin-top: 10px;
     cursor: pointer;
 }
@@ -472,4 +470,20 @@ button {   /*check why I have button twice*/
     color: rgb(255, 229, 193);
     font-family: Poppins, sans-serif;
     padding: 5px;
+}
+
+
+
+/*smaller scrrens*/
+@media (max-width: 360px) {
+    section {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto;
+    }
+    .time-container {
+        margin-bottom: 50px;
+        order: -1;
+      }
 }
