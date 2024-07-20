@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* My code */
+
+
+/*The universal features*/
+
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-image: url('/src/assets/cliff\ and\ blue\ water.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 1s ease;
+    margin: 0;
+}
+
+.header {
+    position: fixed;
+}
+
+.header a {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    filter: invert(1);
+    align-items: center;
+    
+}
+
+.header h2 {
+    font-size: 15px;
+}
+
+.header img {
+    width: 30px;
+}
+
+.main {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    min-height: 100vh;
+}
+
+
+.container-all {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    height: 60px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer img {
+    width: 30px;
+    filter: invert(1);
+}
+
+
+
+/*The elements and tags from the index.html*/
+
+section {
+    height: 50vh;
+    width: 50%;
+}
+
+.list-container, .time-container, .pass-container {
+    display: flex;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+}
+
+.time-container, .pass-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pass-container {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+/*Links - index.html*/
+
+.input-and-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 95px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    height: 700px;
+}
+
+.title {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.title img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column; 
+    padding: 0;
+    max-width: 400px;
+    color: #f4f4f4;
+    border-radius: 15px;
+    line-height: 16px;
+}
+
+input[type="text"], input[type="number"] { /*probably I copied from password css, remove type number*/
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+input {
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #0371d8;
+    border: none;
+    color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+button {   /*check why I have button twice*/
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.links-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: 20px;
+    overflow: auto;
+}
+
+/*Links - JavaScript created*/
+
+.links-container li {
+    background-color: #33333393;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+
+.links-container li a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}   
+
+.links-container button {
+    position: absolute;
+    top: -18px;
+    right: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 10px;
+    background-color: #33333393;
+}
+
+
+/*Time and weather - index.html*/
+
+.time-date {
+    height: 140px;
+    width: 350px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    max-width: 400px;
+    color: #f4f4f4;
+    border-radius: 15px;
+    line-height: 16px;
+    margin-top: 10px;
+}
+
+
+#hour, #date {
+    font-weight: 700;
+    font-family: Poppins, sans-serif;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.hour {
+    font-size: 50px;
+    color: #ffffffb0;
+    margin-top: 0;
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #ffffffb0;
+}
+
+
+.container {
+    height: 300px;
+    width: 350px;
+    text-align: center; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    padding: 20px;
+    max-width: 400px;
+    color: #f4f4f4;
+    border-radius: 15px;
+    background-color: #33333393;
+}
+
+.forecastContainer {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    width: 300px; 
+    height: 200px; 
+    margin-top: 25px; 
+    overflow-x: scroll;
+}
+
+
+/*Time and weather - JavaScript created*/
+
+.place {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.weather p{
+    color: #ffe5c1;
+}
+
+.temp-and-cond-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.picture {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    gap: 10px;
+}
+
+
+.picture img {
+    width: 100%;
+    height: 100%;
+}
+
+.temperature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature img {
+    filter: invert(1);
+    width: 30px;
+}
+
+.weather-conditions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.weather-conditions p {
+    color: #b0b0b0;
+}
+
+.image {
+    width: 60px;
+    height: 60px;
+}
+
+.image-weather {
+    width: 100%;
+    height: 100%;
+}
+
+.degrees p {
+    color: #ffe5c1;
+}
+
+
+/* Password - index.html*/
+
+.texto h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.texto img {
+    height: 20px;
+    width: 20px;
+    filter: invert(1);
+}
+
+.password-generator {
+    width: 350px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    max-width: 400px;
+    color: #f4f4f4;
+    border-radius: 15px;
+    background-color: #33333393;
+    line-height: 16px;
+}
+
+
+.inputbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+#number {
+   border-radius: 5px;
+   display: inline-block;
+   text-align: start;
+   color: black;
+   padding: 10px;
+   border: none;
+}
+
+#generator {
+    background-color: #0371d8;
+    border: none;
+    color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Password - JavaScript created */
+
+.password-text {
+    font-weight: 700;
+    font-size: 20px;
+    font-family: Poppins, sans-serif;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.password-result {
+    font-weight: 400;
+    font-size: 20px;
+    color: rgb(255, 229, 193);
+    font-family: Poppins, sans-serif;
+    padding: 5px;
+}

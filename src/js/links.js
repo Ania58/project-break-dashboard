@@ -79,7 +79,7 @@ const addLinkToDOM = (linkName, urlAddress) => {
         listItem.remove();
         // Update localStorage after removal
         let updatedLinks = JSON.parse(localStorage.getItem('links')) || [];
-        updatedLinks = updatedLinks.filter(link => link.url !== url);
+        updatedLinks = updatedLinks.filter(link => link.url !== urlAddress);
         localStorage.setItem('links', JSON.stringify(updatedLinks));
     });
 };

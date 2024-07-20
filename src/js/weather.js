@@ -74,7 +74,7 @@ fetchWeather()
 
 
 
-const pics = [
+const pics3 = [
     "https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1536649986370-e623f6c7c1e1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1592035659284-3b39971c1107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvc21vc3xlbnwwfHwwfHx8MA%3D%3D",
@@ -93,12 +93,12 @@ const pics = [
     "https://images.unsplash.com/photo-1720210613441-7c5e33beaa01?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1719370281932-299f40a5d8ee?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]; 
-        const pic = document.querySelector('body'); 
+        const pic3 = document.querySelector('body'); 
   
         function showImage() { 
-            const a = Math.floor(Math.random() * pics.length); 
-            const img = pics[a]; 
-            document.body.style.backgroundImage = `url(${img})`; 
+            const a3 = Math.floor(Math.random() * pics3.length); 
+            const img3 = pics3[a3]; 
+            document.body.style.backgroundImage = `url(${img3})`; 
         } 
   
         setInterval(showImage, 15000); 

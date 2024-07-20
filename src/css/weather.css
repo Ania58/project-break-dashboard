@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,6 +55,29 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
 
+}
+
+.header {
+    position: fixed;
+}
+
+.header a {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+    filter: invert(1);
+    align-items: center;
+    
+}
+
+.header h2 {
+    font-size: 15px;
+}
+
+.header img {
+    width: 30px;
 }
 
 .main {
@@ -160,4 +185,24 @@ body {
 
 .degrees p {
     color: #ffe5c1;
+}
+
+footer {
+    height: 60px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.footer nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer img {
+    width: 30px;
+    filter: invert(1);
 }

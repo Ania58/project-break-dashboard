@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Dashboard</title>
+</head>
+<body id="index">
+    <main class="main">
+        <section class="container-all">
+            <section class="list-container">
+                <article class="input-and-list">
+                    <div class="title">
+                        <h2>Añade tu enlace de interés</h2>
+                            <img src="src/assets/enlace.png" alt="link-icon" />
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="link-name" id="link-name"  required placeholder="Nombre de tu enlace"/>
+                        <input type="text" name="url-path" id="url-path" required placeholder="Pega aqui la URL" />
+                        <button id="add-link">Añadir enlace</button>
+                    </div>
+                    <ul class="links-container" id="links-container"></ul>
+                </article>
+            </section>
+            <section class="time-container">
+                <article class="time-date">
+                    <div class="title"></div>
+                    <div id="hour" class="hour"></div>
+                    <div id="date" class="date"></div>
+                </article>
+                <article class="container">
+                    <div class="forecastContainer"></div>
+                </article>
+            </section>
+            <section></section>
+            <section class="pass-container">
+                <div class="texto" id="texto">
+                    <h2>Crea tu contraseña segura
+                        <img src="src/assets/padlock black hole.png" alt="padlock" />
+                    </h2>
+                </div>
+                <div class="password-generator" id="password-generator">
+                    <div class="inputbox" id="inputbox">
+                        <p>Numero de caracteres de la Contraseña</p>
+                        <div class="buttons">
+                            <input type="number" min="12" max="50" id="number" value="12"/>
+                            <button id="generator" type="button">Generar Contraseña</button>
+                            <div id="passwordDisplay"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <footer class="footer">
+                    <nav>
+                        <a href="/src/components/watch.html"><img src="/src/assets/watch.png" alt="clock"></a>
+                        <a href="/src/components/password.html"><img src="/src/assets/lock.png" alt="lock"></a>
+                        <a href="/src/components/links.html"><img src="/src/assets/link.png" alt="link"></a>
+                        <a href="/src/components/weather.html"><img src="/src/assets/cloud.png" alt="cloud"></a>
+                    </nav>
+                </footer>
+        </section>
+    </main>
+    <script src="/script.js"></script> 
+    <script src="/src/js/links.js"></script>
+    <!--<script src="/src/js/time.js"></script>-->
+    <script src="/src/js/weather.js"></script>
+    <script src="/src/js/password.js"></script>
+</body>
+</html>

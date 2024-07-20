@@ -49,7 +49,7 @@ setInterval(updateTime,1000);
 
 
 
-const pics = [
+const pics2 = [
     "https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1536649986370-e623f6c7c1e1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1536649986370-e623f6c7c1e1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -64,12 +64,12 @@ const pics = [
     "https://images.unsplash.com/photo-1720210613441-7c5e33beaa01?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "https://images.unsplash.com/photo-1719370281932-299f40a5d8ee?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         ]; 
-        const pic = document.querySelector('body'); 
+        const pic2 = document.querySelector('body'); 
   
         function showImage() { 
-            const a = Math.floor(Math.random() * pics.length); 
-            const img = pics[a]; 
-            document.body.style.backgroundImage = `url(${img})`; 
+            const a2 = Math.floor(Math.random() * pics2.length); 
+            const img2 = pics2[a2]; 
+            document.body.style.backgroundImage = `url(${img2})`; 
         } 
   
         setInterval(showImage, 15000); 
