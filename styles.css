@@ -482,8 +482,19 @@ button {
       width: 100%;
       height: auto;
     }
+    .list-container {
+        margin-bottom: 50px;
+      }
+    .links-container {
+        height: 210px;
+        min-height: auto;
+      }
     .time-container {
         margin-bottom: 50px;
         order: -1;
+      }
+      
+      .links-container li  {
+        margin-top: 0;
       }
 }
